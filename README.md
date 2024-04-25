@@ -1,8 +1,8 @@
-# Eaglercraft 1.12 source
+# Minecraft 1.12 source
 
 [![Java CI with Gradle](https://github.com/catfoolyou/Eaglercraft-1.12/actions/workflows/gradle.yml/badge.svg)](https://github.com/catfoolyou/Eaglercraft-1.12/actions/workflows/gradle.yml)
 
-This repo contains the source code of my Eaglercraft 1.12 project. While I have made a somewhat functioning version of a desktop runtime, the web version has not yet been compiled (And will not be any time soon).
+This repo contains the source code of my Minecraft 1.12 project with some Eaglercraft support. While I have made a somewhat functioning version of a desktop runtime, the web version has not yet been compiled (And will not be any time soon).
 This client comes with Optifine built in.
 
 
