@@ -37,12 +37,17 @@ public class Main
         OptionSpec<String> optionspec7 = optionparser.accepts("proxyUser").withRequiredArg();
         OptionSpec<String> optionspec8 = optionparser.accepts("proxyPass").withRequiredArg();
 
-        Scanner authSystem = new Scanner(System.in);
-        System.out.println("Enter username:");
+		String[] defaultNames = new String[] {
+				"Yeeish", "Yeeish", "Yee", "Yee", "Yeer", "Yeeler", "Eagler", "Eagl",
+				"Darver", "Darvler", "Vool", "Vigg", "Vigg", "Deev", "Yigg", "Yeeg"
+		};
 
-        OptionSpec<String> optionspec9 = optionparser.accepts("username").withRequiredArg().defaultsTo(authSystem.next());
+		Random rand = new Random();
+		String username = defaultNames[rand.nextInt(defaultNames.length)] + defaultNames[rand.nextInt(defaultNames.length)] + (100 + rand.nextInt(900));
 
-        OptionSpec<String> optionspec10 = optionparser.accepts("uuid").withRequiredArg();
+        OptionSpec<String> optionspec9 = optionparser.accepts("username").withRequiredArg().defaultsTo(username);
+
+        OptionSpec<String> optionspec10 = optionparser.accepts("uuid").withRequiredArg().defaultsTo(username);
         OptionSpec<String> optionspec11 = optionparser.accepts("accessToken").withRequiredArg().required();
         OptionSpec<String> optionspec12 = optionparser.accepts("version").withRequiredArg().required();
         OptionSpec<Integer> optionspec13 = optionparser.accepts("width").withRequiredArg().<Integer>ofType(Integer.class).defaultsTo(Integer.valueOf(854));
